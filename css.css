@@ -1,0 +1,45 @@
+.header-right a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header-right a::before {
+  content: "";
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.header-right a:hover::before {
+  width: 100%;
+}
+
+.header-right a:hover {
+  color: #1E90FF;
+  border-color: white;
+}
+#kontak a {
+  color: #1E90FF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#kontak a:hover {
+  color: #104e8b;
+  text-decoration: underline;
+}

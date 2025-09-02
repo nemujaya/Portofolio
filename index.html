@@ -1,97 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>My Portofolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Design Marketing</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+    body {background: #f5f5f5; color: #333;}
+    header {
+      background: url('bg header.png') no-repeat center center/cover;
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-left {text-align: left;}
+    header h1 {font-size: 28px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
+    header img {width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid white;}
+
+    .header-right a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    .header-right a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: #1E90FF;
+      transition: width 0.3s ease;
+    }
+
+    .header-right a:hover {
+      color: #1E90FF;
+      transform: scale(1.1);
+    }
+
+    .header-right a:hover::after {
+      width: 100%;
+    }
+
+    .social-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+    section {max-width: 1000px; margin: 30px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} 
+    h2 {margin-bottom: 15px; color: #1E90FF;}
+    .skills {display: flex; gap: 20px; flex-wrap: wrap;}
+    .skill-box {background: #eee; padding: 10px 20px; border-radius: 5px;}
+    .projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;}
+    .project {background: #fafafa; padding: 15px; border-radius: 10px; box-shadow: 0 1px 5px rgba(0,0,0,0.1);}
+    .project img {width: 100%; border-radius: 8px; margin-bottom: 10px;}
+    .project a {text-decoration: none; color: #1E90FF; font-weight: bold; display: inline-block; margin-top: 10px;}
+    .project a:hover {text-decoration: underline;}
+    footer {text-align: center; background: #333; color: white; padding: 15px; margin-top: 30px;}
+    footer a {color: #1E90FF; text-decoration: none;}
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <nav>
-            <h2 class="logo">Porto<span>Folio</span></h2>
-            <ul>
-                <li><a href="#">Home</a></u1>
-                <li><a href="#">tentang</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Kontak</a></li>
-            </ul>
-            <div class="btn">Subscribe</div>
-        </nav>
-        <div class="content">
-            <h4>Hello! Nama Saya</h4>
-            <h1>Nemu  <span>Jaya</span></h1>
-            <h3>Saya Seorang Desain Grafis</h3>
-            <div class="news">
-                <form action="">
-                    <input type="email" name="email" placeholder="input your Email" id="mail">
-                    <input type="submit" value="Lets To Start" name="submit">
-                </form>
-            </div>
-        </div>
+  <header>
+    <div class="header-left">
+      <img src="fotokartun.png" alt="Foto Profil">
+      <h1>I NYOMAN NEMU JAYA</h1>
+      <p>Design Marketing Specialist</p>
     </div>
-    <div class="about">
-        <div class="main">
-            <img src="Profile.JPG" alt="">
-            <div class="about-text">
-                <h2>Tentang Kami</h2>
-                <h5>Develover <span>& Designer</span></h5>
-                <p>Saya adalah seorang programer dan desainer</p>
-                <button  type="button">Let's Talk</button>
-            </div>
-        </div>
+    <div class="header-right">
+      <a href="#tentang">Tentang</a>
+      <a href="#skills">Skills</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#kontak">Kontak</a>
     </div>
-    <div class="service">
-        <div class="title">
-            <h2>servis</h2>
-        </div>
-        <div class="box">
-            <div class="card">
-                <i class="fa-solid fa-bars"></i>
-                <h5>Web Develover</h5>
-                <div class="pra">
-                    <p>Mengerjakan Jasa Web Termasuk dari Keahlian Kami</p>
-                    <p style="text-align: center;"></p>
-                    <a href="#" class="button">Read More</a>
-                </div>
-            </div>
-            <div class="card">
-                <i class="fa-regular fa-user"></i>
-                <h5>Desain Grafis</h5>
-                <div class="pra">
-                    <p>Selain sebagai Web Development saya juga mahir dalam desain Grafis</p>
-                    <p style="text-align: center;"></p>
-                    <a href="#" class="button">Read More</a>
-                </div>
-            </div>
-            <div class="card">
-                <i class="fa-regular fa-desktop"></i>
-                <h5>Random</h5>
-                <div class="pra">
-                    <p>Saya juga ahli dalam bidang apapun</p>
-                    <p style="text-align: center;"></p>
-                    <a href="#" class="button">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="kontak-saya">
-        <p>Lihat lebih jauh tentang saya</p>
-        <a href="#" class="button-dua">Hubungi Kami</a>
-    </div>
-    <footer>
-        <p>Nemu Jaya</p>
-        <p>Untuk lebih mengenal tentang saya hubungi</p>
-        <div class="sosial">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <p class="end">CopyRight</p>
-    </footer>
+  </header>
 
-    
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang Design Grafis dan Marketing yang berfokus pada kreativitas serta strategi. Memiliki kemampuan dalam menciptakan desain visual yang menarik, sekaligus memahami bagaimana mengemasnya menjadi materi pemasaran yang efektif. Dengan pengalaman dalam branding, promosi digital, dan komunikasi visual, saya selalu berusaha menghadirkan karya yang tidak hanya indah, tetapi juga mampu meningkatkan nilai sebuah produk maupun bisnis.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills">
+      <div class="skill-box">Photoshop</div>
+      <div class="skill-box">Illustrator</div>
+      <div class="skill-box">Canva</div>
+      <div class="skill-box">Capcut</div>
+      <div class="skill-box">Meta Ads</div>
+      <div class="skill-box">Google Ads</div>
+    </div>
+  </section>
+
+  <section id="portofolio">
+    <h2>Portofolio Project</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="Promo Katalog.jpg" alt="Project 1">
+        <h3>PROMO KATALOG</h3>
+        <p>Bulanan, JSM & SMS</p>
+        <a href="project1.html" target="_blank">Lihat Detail</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+        <h3>BRANDING & AdVERTISING MEDIA</h3>
+        <p>Logo, Banner, Poster, Billboard, NeonBox</p>
+        <a href="project2.html" target="_blank">Lihat Detail</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+        <h3>Social Media Management</h3>
+        <p>Followers naik dari 5K → 12K dalam 4 bulan.</p>
+        <a href="project3.html" target="_blank">Lihat Detail</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="social-buttons">
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-btn linkedin">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.behance.net/yourprofile" target="_blank" class="social-btn behance">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="Behance">
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-btn instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/6281234567890" target="_blank" class="social-btn whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Nemu Jaya | Dibuat dengan ❤️</p>
+  </footer>
 </body>
 </html>
